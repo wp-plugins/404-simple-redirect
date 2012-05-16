@@ -6,7 +6,7 @@ Tested up to: 3.3.1
 Stable tag: 1.0
 
 == Description ==
-This plugin hooks the normal Wordpress workflow in order to determine if the request is processing will cause a 404 HTTP error. In that case it prevents Wordpress to do any other processing and sends the user to the page defined in the plugin options.
+If the page request is going to cause a 404 HTTP error the plugin redirects the user to a specific URL, defined in the backend.
 
 A working and simple solution.
 
