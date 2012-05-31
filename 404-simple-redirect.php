@@ -2,8 +2,8 @@
 /*
  * Plugin Name: 404 Simple Redirect
  * Plugin URI: http://jordiplana.com/404-simple-redirect-plugin-for-wordpress
- * Description: This plugin hooks the normal Wordpress workflow in order to determine if the request is processing will cause a 404 HTTP error. In that case it prevents Wordpress to do any other processing and sends the user to the page defined in the plugin options.
- * Version: 1.0
+ * Description: This plugin determines if the request will cause a 404 HTTP error and redirects to the page defined in the plugin options. 
+ * Version: 1.1
  * Author: Jordi Plana
  * Author URI: http://jordiplana.com
  */
@@ -11,6 +11,7 @@
 add_action('admin_init', 'fourzerofour_register_settings');
 add_action('admin_menu', 'fourzerofour_add_menu');
 add_action('wp','determine_if_fourzerofour'); 
+add_filter('plugin_action_links', 'add_settings_link', 10, 2 );
 
 function fourzerofour_add_menu(){
     //Add menu page
@@ -74,4 +75,15 @@ function determine_if_fourzerofour(&$arr){
         die;
     }
 }
+
+function add_settings_link($links, $file) {
+    static $this_plugin;
+    if (!$this_plugin) $this_plugin = plugin_basename(__FILE__);
+
+    if ($file == $this_plugin){
+    $settings_link = '<a href="options-general.php?page=fourzerofour.php">Settings</a>';
+    array_unshift($links, $settings_link);
+    }
+    return $links;
+ }
 ?>
