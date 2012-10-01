@@ -2,7 +2,7 @@
 /*
  * Plugin Name: 404 Simple Redirect
  * Plugin URI: http://jordiplana.com/404-simple-redirect-plugin-for-wordpress
- * Description: This plugin hooks the normal Wordpress workflow in order to determine if the request is processing will cause a 404 HTTP error. In that case it prevents Wordpress to do any other processing and sends the user to the page defined in the plugin options.
+ * Description: This plugin hooks the normal Wordpress workflow in order to determine if the request is processing will cause a 404 HTTP error.
  * Version: 1.2
  * Author: Jordi Plana
  * Author URI: http://jordiplana.com
