@@ -2,8 +2,8 @@
 Contributors: JordiPlana
 Tags: 404, redirect, redirection, error, http
 Requires at least: 2.7.0
-Tested up to: 3.3.1
-Stable tag: 1.1
+Tested up to: 3.4.2
+Stable tag: 1.2
 
 == Description ==
 This plugin hooks the normal Wordpress workflow in order to determine if the request is processing will cause a 404 HTTP error. In that case it prevents Wordpress to do any other processing and sends the user to the page defined in the plugin options.
@@ -32,6 +32,9 @@ Loading a plain HTML page will result easier for our web server than loading a c
 The plugin hooks the normal Wordpress workflow in order to determine if the request is processing will cause a 404 HTTP error. Then it makes a redirection to the URL defined in the plugin settings.
 
 == Changelog ==
+= 1.2 =
+* Fixed empty URL bug [+info](http://wordpress.org/support/topic/plugin-404-simple-redirect-url-required-or-you-get-a-blank-page)
+* Added localization
 = 1.1 =
 * Fixed typo errors
 * Added settings link from plugin page
